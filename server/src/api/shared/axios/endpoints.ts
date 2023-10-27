@@ -1,48 +1,49 @@
 const kingdoms = {
-  list: 'kingdoms/',
-  one: (id: string) => `kingdoms/${id}`,
+  list: 'kingdoms',
+  one: (id: number) => `kingdoms/${id}`,
 }
 
 const subkingdoms = {
-  list: 'subkingdoms/',
-  one: (id: string) => `subkingdoms/${id}`,
+  list: 'subkingdoms',
+  one: (id: number) => `subkingdoms/${id}`,
 }
 
 const divisions = {
-  list: 'divisions/',
-  one: (id: string) => `divisions/${id}`,
-  classes: 'division_classes/',
-  classes_one: (id: string) => `division_classes/${id}`,
-  orders: 'division_orders/',
-  orders_one: (id: string) => `division_orders/${id}`
+  list: 'divisions',
+  one: (id: number) => `divisions/${id}`,
+  classes: 'division_classes',
+  classes_one: (id: number) => `division_classes/${id}`,
+  orders: 'division_orders',
+  orders_one: (id: number) => `division_orders/${id}`
 };
 
 const families = {
-  list: 'families/',
-  one: (id: string) => `families/${id}`,
+  list: 'families',
+  one: (id: number) => `families/${id}`,
 }
 
 const genus = {
-  list: 'genus/',
-  one: (id: string) => `genus/${id}`,
-  plants: (genus_id: string) => `genus/${genus_id}/plants`
+  list: 'genus',
+  one: (id: number) => `genus/${id}`,
+  plants: (genus_id: number) => `genus/${genus_id}/plants`
 };
 
 const plants = {
-  list: 'plants/',
-  one: (id: string) => `plants/${id}`,
-  search: (search_text: string) => `plants/search/q=${search_text}`
+  list: 'plants',
+  one: (id: number) => `plants/${id}`,
+  search: (search_text: string) => `plants/search?q=${search_text}`
 };
 
 const species = {
-  list: 'species/',
-  one: (id: string) => `species/${id}`,
-  search: (search_text: string) => `species/search/q=${search_text}`
+  list: 'species',
+  one: (id: number) => `species/${id}`,
+  search: (search_text: string) => `species/search?q=${search_text}`
 };
 
 const distributions = {
-  list: 'distributions/',
-  plants: (zone_id: string) => `distributions/${zone_id}/plants`
+  list: 'distributions',
+  one: (id: number) => `distributions/${id}`,
+  plants: (zone_id: number) => `distributions/${zone_id}/plants`
 };
 
 export {
