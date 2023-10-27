@@ -5,7 +5,7 @@ import connectDB from './database/database';
 // import * as models from './database/models';
 import cors from 'cors';
 import fileUpload from 'express-fileupload';
-// import v1Router from './api/v1/routes';
+import v1Router from './api/v1/routes';
 
 const PORT = process.env.PORT || 5000;
 
@@ -14,7 +14,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use(fileUpload({}))
-// app.use('/api/v1', v1Router)
+app.use('/api/v1', v1Router)
 // app.use(errorHandler)
 
 const start = async () => {
