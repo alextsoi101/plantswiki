@@ -1,8 +1,7 @@
-// import * as dotenv from "dotenv";
 import 'dotenv/config';
 import express from 'express';
 import connectDB from './database/database';
-// import * as models from './database/models';
+import * as models from './database/models';
 import cors from 'cors';
 import fileUpload from 'express-fileupload';
 import v1Router from './api/v1/routes';
