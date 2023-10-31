@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import UserService from '../services/user.service';
 import * as interfaces from '../interfaces/user.interfaces';
-// import { RequestWithDecodedToken } from '../../../../v1/middleware/authMiddleware';
-// import { ExtendedRequest } from '../../../../v1/middleware/authMiddleware';
 import validateEmail from '../../../../shared/utils/validateEmail';
 
 class UserController {

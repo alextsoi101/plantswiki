@@ -30,7 +30,6 @@ class UserService {
         let comparePassword = bcrypt.compareSync(params.password, user.password);
 
         if (!comparePassword) {
-          console.error('PASSWORD NOT MATCH')
           throw new Error;
         }
 
