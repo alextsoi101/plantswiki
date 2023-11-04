@@ -1,10 +1,16 @@
-const SearchInput = () => {
+import { FC } from "react";
 
+interface SearchInputProps {
+  handleChange: (value: string) => void;
+}
+
+const SearchInput: FC<SearchInputProps> = ({handleChange}) => {
   return (
     <div className="flex items-center w-[100%] rounded-full">
       <input 
         type="text" 
         placeholder="Search..."
+        onChange={(e) => handleChange(e.target.value)}
         className="w-[100%] h-[50px] rounded-l-full px-[26px] text-dark-black placeholder:text-dark"
       />
       <div className="min-w-[50px]">
