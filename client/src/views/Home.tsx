@@ -1,5 +1,5 @@
 import { FC } from "react";
-import SearchForm from "../features/search/components/SearchForm";
+import { SearchForm } from "../features/search/index";
 
 const Home: FC = () => {
   return (
