@@ -1,5 +1,5 @@
 import { FC } from "react";
-import SearchFormResult from "./SerchFormResult";
+import SearchFormResult from "./SearchFormResult";
 
 interface SearchFormResultsProps {
   results: {name: string; rank: string;}[];
