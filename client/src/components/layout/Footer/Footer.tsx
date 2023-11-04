@@ -4,9 +4,13 @@ const Footer: FC = () => {
 
   return (
     <footer>
-      <div className="flex justify-between items-center px-[100px] h-[56px] bg-dark text-base text-white">
+      <div className={
+        `xs:flex xs:flex-col xs:justify-normal items-center px-[20px] py-[10px] bg-dark text-sm text-white
+        lg:flex lg:flex-row lg:justify-between items-center px-[100px] bg-dark text-base text-dark`
+        }
+      >
         <div>
-          <ul className="flex justify-between items-center gap-[20px] font-extralight">
+          <ul className="flex flex-wrap items-center justify-center gap-x-[20px] gap-y-[5px] font-extralight">
             <li className="cursor-pointer hover:underline">
               Terms and conditions
             </li>
@@ -21,11 +25,11 @@ const Footer: FC = () => {
             </li>
           </ul>
         </div>
-        <div className="font-normal">
+        <div className="font-normal xs:mt-[10px] lg:mt-[0px]">
           © Plants of the World Online
         </div>
       </div>
-      <div className="flex justify-center items-center h-[44px] bg-dark-black">
+      <div className="flex justify-center items-center py-[10px] bg-dark-black">
         <a href="" className="flex items-center text-base text-white font-semibold hover:underline text-white">
           Github
           <span className="ml-[5px]">
