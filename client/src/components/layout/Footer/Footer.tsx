@@ -5,8 +5,9 @@ const Footer: FC = () => {
   return (
     <footer>
       <div className={
-        `xs:flex xs:flex-col xs:justify-normal items-center px-[20px] py-[10px] bg-dark text-sm text-white
-        lg:flex lg:flex-row lg:justify-between items-center px-[100px] bg-dark text-base text-dark`
+        `items-center bg-dark text-white
+        xs:flex xs:flex-col xs:justify-normal xs:px-[20px] xs:py-[10px] xs:text-sm
+        lg:flex lg:flex-row lg:justify-between lg:px-[100px] lg:py-[15px] lg:text-base`
         }
       >
         <div>
@@ -25,12 +26,12 @@ const Footer: FC = () => {
             </li>
           </ul>
         </div>
-        <div className="font-normal xs:mt-[10px] lg:mt-[0px]">
+        <div className="font-normal xs:mt-[10px] xs:text-sm lg:mt-[0px] lg:text-base">
           © Plants of the World Online
         </div>
       </div>
       <div className="flex justify-center items-center py-[10px] bg-dark-black">
-        <a href="" className="flex items-center text-base text-white font-semibold hover:underline text-white">
+        <a href="" className="flex items-center text-base text-white font-medium hover:underline text-white">
           Github
           <span className="ml-[5px]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
