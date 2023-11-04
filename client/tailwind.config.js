@@ -10,6 +10,7 @@ export default {
       'blue': '#008285',
       'dark': '#262626',
       'dark-black': '#181818',
+      'black': '#000000',
       'gray': '#757575',
       'silver': '#C8C8C8',
       'gray-light': '#f4f3f1',
@@ -46,7 +47,11 @@ export default {
       'xl': '1280px',
       '2xl': '1536px',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        plant: 'url(/src/assets/images/searchsection.jpg)'
+      }
+    },
   },
   plugins: [],
 }
