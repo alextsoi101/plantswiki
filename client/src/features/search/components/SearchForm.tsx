@@ -3,7 +3,7 @@ import SearchInput from "./SearchInput";
 
 const SearchForm: FC = () => {
   return (
-    <div>
+    <div className="w-[100%]">
       <SearchInput />
     </div>
   )
