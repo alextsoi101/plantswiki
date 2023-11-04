@@ -14,6 +14,7 @@ export default {
       'gray': '#757575',
       'silver': '#C8C8C8',
       'gray-light': '#f4f3f1',
+      'yellow': '#ffde02'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
