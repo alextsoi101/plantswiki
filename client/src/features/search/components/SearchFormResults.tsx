@@ -8,7 +8,7 @@ interface SearchFormResultsProps {
 
 const SearchFormResults: FC<SearchFormResultsProps> = ({results, inputText}) => {
   return (
-    <div className="w-[100%] rounded-3xl bg-white px-[30px] py-[10px]">
+    <div className="w-[100%] rounded-3xl bg-white px-[30px] py-[14px]">
       {results.map(result => 
         <SearchFormResult 
           name={result.name}
