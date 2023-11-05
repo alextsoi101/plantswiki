@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { SearchForm } from "../features/search/index";
+import FeaturedPlants from "../features/plants/components/FeaturedPlants";
 
 const Home: FC = () => {
   return (
@@ -20,7 +21,7 @@ const Home: FC = () => {
         </div>
       </div>
       <div>
-
+        <FeaturedPlants />
       </div>
     </div>
   )
