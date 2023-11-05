@@ -13,12 +13,17 @@ const SearchInput: FC<SearchInputProps> = ({handleChange, focusInput, unfocusInp
         type="text" 
         placeholder="Search..."
         onChange={(e) => handleChange(e.target.value)}
-        className="w-[100%] h-[50px] rounded-l-full px-[26px] text-dark-black placeholder:text-dark"
         onFocus={focusInput}
         onBlur={unfocusInput}
+        className="w-[100%] rounded-l-full text-dark-black placeholder:text-dark placeholder:font-light
+          xs:h-[40px] xs:px-[22px]
+          md:h-[50px] md:px-[26px]"
       />
-      <div className="min-w-[50px]">
-        <button className="flex items-center justify-center w-[100%] h-[50px] rounded-r-full bg-white duration-200 hover:text-blue">
+      <div className="xs:min-w-[40px] md:min-w-[50px]">
+        <button className="flex items-center justify-center w-[100%]
+          rounded-r-full bg-white duration-200 hover:text-blue
+          xs: h-[40px] md:h-[50px]"
+        >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
