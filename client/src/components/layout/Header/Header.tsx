@@ -27,7 +27,7 @@ const Header: FC = () => {
               />
             </button>
           </div>
-          <div className="xs:ml-[5px] md:ml-[12px]">
+          <div className="xs:ml-[5px] md:ml-[12px] cursor-pointer">
             <img 
               className="xs:h-[30px] md:h-[50px]"
               src={logo} 
@@ -35,7 +35,7 @@ const Header: FC = () => {
             />
           </div>
         </div>
-        <div className="content-center 
+        <div className="content-center mr-[15px]
           xs:hidden md:flex"
         >
           <NavBar />
