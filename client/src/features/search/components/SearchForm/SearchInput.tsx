@@ -2,9 +2,11 @@ import { FC } from "react";
 
 interface SearchInputProps {
   handleChange: (value: string) => void;
+  focusInput?: () => void;
+  unfocusInput?: () => void;
 }
 
-const SearchInput: FC<SearchInputProps> = ({handleChange}) => {
+const SearchInput: FC<SearchInputProps> = ({handleChange, focusInput, unfocusInput}) => {
   return (
     <div className="flex items-center w-[100%] rounded-full">
       <input 
@@ -12,6 +14,8 @@ const SearchInput: FC<SearchInputProps> = ({handleChange}) => {
         placeholder="Search..."
         onChange={(e) => handleChange(e.target.value)}
         className="w-[100%] h-[50px] rounded-l-full px-[26px] text-dark-black placeholder:text-dark"
+        onFocus={focusInput}
+        onBlur={unfocusInput}
       />
       <div className="min-w-[50px]">
         <button className="flex items-center justify-center w-[100%] h-[50px] rounded-r-full bg-white duration-200 hover:text-blue">

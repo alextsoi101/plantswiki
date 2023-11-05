@@ -4,20 +4,42 @@ import SearchFormResults from "./SearchFormResults";
 
 const SearchForm: FC = () => {
 
+  const [inputFocus, setInputFocus] = useState<boolean>(false);
   const [inputText, setInputText] = useState<string | null>(null);
+
+  const focusInput = (): void => {
+    setInputFocus(true)
+  }
+
+  const unfocusInput = (): void => {
+    setInputFocus(false)
+  }
 
   const handleInputChange = (value: string): void => {
     setInputText(value)
   }
 
   return (
-    <div className="w-[100%]">
+    <div className="relative w-[100%]">
       <SearchInput 
         handleChange={handleInputChange}
+        focusInput={focusInput}
+        unfocusInput={unfocusInput}
       />
-      <div className="mt-[10px]">
+      <div className={ inputFocus
+        ? "absolute mt-[10px] w-[100%] z-50"
+        : "hidden mt-[10px] w-[100%] z-50"
+        }
+      >
         <SearchFormResults 
-          results={[{name: 'Plant tree', rank: 'species'}, {name: 'Plant tree', rank: 'species'}, {name: 'Plant tree', rank: 'species'}, ]}
+          results={[
+            {name: 'Plant tree', rank: 'species'}, 
+            {name: 'Plant tree', rank: 'species'}, 
+            {name: 'Plant tree', rank: 'species'}, 
+            {name: 'Plant tree', rank: 'species'}, 
+            {name: 'Plant tree', rank: 'species'}, 
+            {name: 'Plant tree', rank: 'species'}, 
+          ]}
           inputText={inputText}
         />
       </div>
