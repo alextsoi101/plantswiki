@@ -5,9 +5,9 @@ const Footer: FC = () => {
   return (
     <footer>
       <div className={
-        `items-center bg-dark text-white
-        xs:flex xs:flex-col xs:justify-normal xs:px-[20px] xs:py-[10px] xs:text-sm
-        lg:flex lg:flex-row lg:justify-between lg:px-[100px] lg:py-[15px] lg:text-base`
+        `flex items-center bg-dark text-white
+        xs:flex-col xs:justify-normal xs:px-[20px] xs:py-[10px] xs:text-sm
+        lg:flex-row lg:justify-between lg:px-[100px] lg:py-[15px] lg:text-base`
         }
       >
         <div>
