@@ -10,9 +10,17 @@ const FeaturedPlants: FC = () => {
       lg:px-[100px] md:pb-[70px]"
     >
       <div className="max-w-[2000px]">
-        <h1 className="text-3xl text-dark">
-          Featured Plants
-        </h1>
+        <div className="flex justify-between items-center">
+          <h1 className="xs:text-2xl md:text-3xl text-dark">
+            Featured Plants
+          </h1>
+          <div className="text-dark cursor-pointer underline duration-200 hover:text-blue
+            xs:text-base xs:font-light 
+            md:text-base md:font-normal"
+          >
+            View all plants
+          </div>
+        </div>
         <div className="flex mt-[20px] items-start
           xs:flex-col xs:justify-normal gap-[32px]
           md:flex-col md:justify-normal gap-[30px]
