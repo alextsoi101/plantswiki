@@ -1,4 +1,5 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { FC, useState, useRef } from 'react';
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
 
 interface NavDropdownProps {
   text: string;
@@ -7,33 +8,25 @@ interface NavDropdownProps {
 
 const NavDropdown: FC<NavDropdownProps> = ({text, items}) => {
 
-  const [menuVisible, setMenuVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState<boolean>(false);
 
   const dropdownRef = useRef<HTMLLIElement>(null)
 
-  useEffect(() => {
-    const handleDocumentClick = (e: any) => {
-      if (dropdownRef.current && e.target && dropdownRef.current.contains(e.target)) {
-        return
-      } else {
-        setMenuVisible(false)
-      }
-    };
-  
-    document.addEventListener('click', handleDocumentClick);
-  
-    return () => {
-      document.removeEventListener('click', handleDocumentClick);
-    };
-  }, []);
+  const hideMenu = () => {
+    setMenuVisible(false)
+  }
+
+  useOnClickOutside(dropdownRef, hideMenu)
 
   return (
     <li 
       className="relative flex flex-col items-center"
       ref={dropdownRef}
-      onClick={() => setMenuVisible(!menuVisible)}
     >
-      <div className="flex items-center text-sm text-dark font-medium cursor-pointer duration-200 hover:text-blue">
+      <div 
+        className="flex items-center text-sm text-dark font-medium cursor-pointer duration-200 hover:text-blue"
+        onClick={() => setMenuVisible(!menuVisible)}
+      >
         <div className="mr-[5px]">
           {text}
         </div>
@@ -42,13 +35,13 @@ const NavDropdown: FC<NavDropdownProps> = ({text, items}) => {
         </svg>
       </div>
       <div className={menuVisible
-          ? "absolute p-[20px] mt-[25px] w-[200px] bg-white opacity-100 rounded-md transition duration-100 ease-in-out translate-y-0 shadow"
-          : "invisible absolute p-[20px] mt-[25px] opacity-0 rounded-md translate-y-2"
+          ? "absolute p-[20px] mt-[25px] w-[200px] bg-white rounded-md shadow-xl z-50"
+          : "hidden absolute p-[20px] mt-[25px] rounded-md z-50"
         }
       >
         {
           items.map(item =>
-            <div className="text-dark hover:text-blue cursor-pointer py-[5px]">
+            <div className="text-dark hover:text-blue cursor-pointer py-[7px]">
               {item.value}
             </div>
           )
