@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import plantblueicon from '../../../../assets/icons/plant-blue.svg';
 import plantgrayicon from '../../../../assets/icons/plant-gray.svg';
 
