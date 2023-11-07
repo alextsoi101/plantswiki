@@ -8,7 +8,7 @@ interface SearchInputProps {
 
 const SearchInput: FC<SearchInputProps> = ({handleChange, focusInput, unfocusInput}) => {
   return (
-    <div className="flex items-center w-[100%] rounded-full">
+    <div className="flex items-center w-[100%] rounded-full border border-silver">
       <input 
         type="text" 
         placeholder="Search..."
