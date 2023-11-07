@@ -21,18 +21,18 @@ const FeaturedPlantsCard: FC<FeaturedPlantsCardProps> = ({imageUrl, rank, name, 
 
   return (
     <div 
-      className="w-[100%] cursor-pointer"
+      className="w-full cursor-pointer"
       onClick={() => goToPlantPage(id)}
       onMouseEnter={() => setCardHover(true)}
       onMouseLeave={() => setCardHover(false)}
     >
-      <div className="w-[100%] h-[210px] overflow-hidden">
+      <div className="w-full h-[210px] overflow-hidden">
         <img 
           src={imageUrl} 
           alt="plant-image" 
           className={cardHover 
-            ? "scale-110 object-cover w-[100%] h-[100%] duration-300 ease-out" 
-            : "object-cover w-[100%] h-[100%] duration-300 ease-out"
+            ? "scale-110 object-cover w-full h-full duration-300 ease-out" 
+            : "object-cover w-full h-full duration-300 ease-out"
           }
         />
       </div>
