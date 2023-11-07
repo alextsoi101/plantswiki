@@ -1,11 +1,15 @@
 import { FC, useState, useRef } from "react";
 import { useOnClickOutside } from "../../../../hooks/useOnClickOutside";
+import { PlantsListVariant } from "./PlantsList";
 
 interface PlantsListHeaderProps {
   total: number;
+  showBlockCards: () => void;
+  showRowCards: () => void;
+  listVariant: PlantsListVariant;
 }
 
-const PlantsListHeader: FC<PlantsListHeaderProps> = ({total}) => {
+const PlantsListHeader: FC<PlantsListHeaderProps> = ({total, showBlockCards, showRowCards, listVariant}) => {
 
   const [sortVisible, setSortVisible] = useState<boolean>(false);
 
@@ -54,13 +58,23 @@ const PlantsListHeader: FC<PlantsListHeaderProps> = ({total}) => {
             </div>
           </div>
 
-          <div className="cursor-pointer hover:text-blue">
+          <div className={ listVariant === 'block'
+              ? "cursor-pointer text-blue"
+              : "cursor-pointer hover:text-blue"
+          }
+            onClick={showBlockCards}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
               <path fillRule="evenodd" d="M3 6a3 3 0 013-3h2.25a3 3 0 013 3v2.25a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm9.75 0a3 3 0 013-3H18a3 3 0 013 3v2.25a3 3 0 01-3 3h-2.25a3 3 0 01-3-3V6zM3 15.75a3 3 0 013-3h2.25a3 3 0 013 3V18a3 3 0 01-3 3H6a3 3 0 01-3-3v-2.25zm9.75 0a3 3 0 013-3H18a3 3 0 013 3V18a3 3 0 01-3 3h-2.25a3 3 0 01-3-3v-2.25z" clipRule="evenodd" />
             </svg>
           </div>
 
-          <div className="cursor-pointer hover:text-blue">
+          <div className={ listVariant === 'row'
+              ? "cursor-pointer text-blue"
+              : "cursor-pointer hover:text-blue"
+          }
+            onClick={showRowCards}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
               <path d="M5.625 3.75a2.625 2.625 0 100 5.25h12.75a2.625 2.625 0 000-5.25H5.625zM3.75 11.25a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5H3.75zM3 15.75a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zM3.75 18.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5H3.75z" />
             </svg>
