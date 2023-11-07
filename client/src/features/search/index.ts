@@ -1,2 +1,3 @@
 export { default as SearchForm } from './components/SearchForm/SearchForm';
-export { default as SearchInput } from './components/SearchForm/SearchInput';
+export { default as SearchResults } from './components/SearchResults/SearchResults';
+export { default as PlantsFilter } from './components/SearchResults/PlantsFilter';
