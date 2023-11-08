@@ -8,12 +8,14 @@ export default {
     colors: {
       'white': '#ffffff',
       'blue': '#008285',
+      'navy': '#016b70',
       'dark': '#262626',
       'dark-black': '#181818',
       'black': '#000000',
       'gray': '#757575',
       'silver': '#C8C8C8',
       'gray-light': '#f4f3f1',
+      'gray-blue': '#F2F8F8',
       'yellow': '#ffde02'
     },
     fontFamily: {
