@@ -16,7 +16,8 @@ export default {
       'silver': '#C8C8C8',
       'gray-light': '#f4f3f1',
       'gray-blue': '#F2F8F8',
-      'yellow': '#ffde02'
+      'yellow': '#ffde02',
+      'pink': '#f8ccc4'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
