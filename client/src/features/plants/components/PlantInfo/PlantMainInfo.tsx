@@ -6,7 +6,8 @@ const PlantMainInfo: FC = () => {
     <div className="flex bg-gray-blue min-h-[400px]
       xs:flex-col lg:flex-row"
     >
-      <div className="xs:px-[32px] xs:pt-[16px] pb-[24px] xs:w-full
+      <div className="xs:px-[20px] xs:pt-[16px] xs:pb-[24px] xs:w-full
+        md:px-[32px]
         lg:py-[32px] lg:w-[50%] 
         xl:pl-[100px] xl:pr-[56px]"
       >
