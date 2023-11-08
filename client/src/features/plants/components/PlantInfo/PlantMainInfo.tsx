@@ -30,7 +30,7 @@ const PlantMainInfo: FC = () => {
       <div className="xs:w-full xs:h-[250px] lg:w-[50%] lg:h-[400px]">
         <img 
           src="https://bs.plantnet.org/image/o/f84a7d4fc2e627ccd451f568479b1932c2b2d900" 
-          alt="" 
+          alt="plant-main-image" 
           className="object-cover w-full h-full"
         />
       </div>
