@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { SearchForm } from "../features/search/index";
-import FeaturedPlants from "../features/plants/components/FeaturedPlants/FeaturedPlants";
+import { FC } from 'react';
+import { SearchForm } from '../features/search/index';
+import { FeaturedPlants } from '../features/plants/index';
 
 const Home: FC = () => {
   return (

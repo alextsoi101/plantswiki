@@ -1,6 +1,6 @@
-import { FC } from "react";
-import PlantMainInfo from "../features/plants/components/PlantInfo/PlantMainInfo";
-import PlantFullInfo from "../features/plants/components/PlantInfo/PlantFullInfo";
+import { FC } from 'react';
+import { PlantMainInfo } from '../features/plants/index';
+import { PlantFullInfo } from '../features/plants/index';
 
 const PlantInfo: FC = () => {
   return (
