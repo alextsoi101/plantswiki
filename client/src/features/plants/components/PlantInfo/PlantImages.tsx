@@ -24,11 +24,11 @@ const PlantImages: FC<PlantImagesProps> = ({images}) => {
           >
             {
               images.map(image =>
-                <div className="w-full xs:h-[180px] md:h-[210px]">
+                <div className="w-full xs:h-[180px] md:h-[210px] overflow-hidden cursor-pointer">
                   <img 
                     src={image} 
                     alt='plant-image' 
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full duration-300 hover:scale-110"
                   />
                 </div>
               )
