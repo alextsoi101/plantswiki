@@ -53,7 +53,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        plant: 'url(/src/assets/images/searchsection.jpg)'
+        plant_search: 'url(/src/assets/images/searchsection.jpg)',
+        plant_blog: 'url(/src/assets/images/blog-main.jpg)',
       }
     },
   },
