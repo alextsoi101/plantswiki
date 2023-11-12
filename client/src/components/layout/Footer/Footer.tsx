@@ -11,7 +11,9 @@ const Footer: FC = () => {
         }
       >
         <div>
-          <ul className="flex flex-wrap items-center justify-center gap-x-[20px] gap-y-[5px] font-extralight">
+          <ul className="flex flex-wrap items-center justify-center 
+            gap-x-[20px] gap-y-[5px] font-extralight"
+          >
             <li className="cursor-pointer hover:underline">
               Terms and conditions
             </li>
@@ -26,12 +28,15 @@ const Footer: FC = () => {
             </li>
           </ul>
         </div>
-        <div className="font-normal xs:mt-[10px] xs:text-sm lg:mt-[0px] lg:text-base">
+        <div className="text-sm font-normal xs:mt-[10px] lg:mt-0">
           © Plants of the World Online
         </div>
       </div>
       <div className="flex justify-center items-center py-[10px] bg-dark-black">
-        <a href="" className="flex items-center text-base text-white font-medium hover:underline text-white">
+        <a 
+          href="" 
+          className="flex items-center text-base text-white font-medium hover:underline text-white"
+        >
           Github
           <span className="ml-[5px]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
