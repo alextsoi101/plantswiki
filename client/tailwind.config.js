@@ -9,6 +9,7 @@ export default {
       'white': '#ffffff',
       'blue': '#008285',
       'navy': '#016b70',
+      'blue-dark': '#070E1D',
       'dark': '#262626',
       'dark-black': '#181818',
       'black': '#000000',
