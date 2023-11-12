@@ -11,7 +11,7 @@ const Footer: FC = () => {
         }
       >
         <div>
-          <ul className="flex flex-wrap items-center justify-center 
+          <ul className="flex flex-wrap items-center justify-center text-sm
             gap-x-[20px] gap-y-[5px] font-extralight"
           >
             <li className="cursor-pointer hover:underline">
