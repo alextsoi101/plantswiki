@@ -27,8 +27,8 @@ const SearchForm: FC = () => {
         unfocusInput={unfocusInput}
       />
       <div className={ inputFocus
-        ? "absolute mt-[10px] w-[100%] z-50"
-        : "hidden mt-[10px] w-[100%] z-50"
+        ? "absolute mt-[5px] w-[100%] z-50"
+        : "hidden mt-[5px] w-[100%] z-50"
         }
       >
         <SearchFormResults 
