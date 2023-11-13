@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import TopicHighlightList from '../features/blog/components/Topics/TopicHighlightList';
-import ArticeList from '../features/blog/components/Articles/ArticleList';
+import ArticleList from '../features/blog/components/Articles/ArticleList';
 import lastsectionimg from '../assets/images/blog-last-section.jpg';
 
 const Blog: FC = () => {
@@ -60,7 +60,7 @@ const Blog: FC = () => {
           Check back for new stories throughout the week.
         </div>
         <div className="mt-[50px] max-w-[1200px] w-full">
-          <ArticeList />
+          <ArticleList />
         </div>
       </section>
       <section className="flex justify-center bg-white

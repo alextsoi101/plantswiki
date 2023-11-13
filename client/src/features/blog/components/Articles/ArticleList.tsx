@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import ArticleCard from './ArticleCard';
 
-interface ArticeListProps {
+interface ArticleListProps {
   articles: [];
 }
 
-const ArticeList: FC = () => {
+const ArticleList: FC = () => {
   return (
     <div>
       <div className="grid gap-[32px]
@@ -34,4 +34,4 @@ const ArticeList: FC = () => {
   )
 }
 
-export default ArticeList;
+export default ArticleList;
