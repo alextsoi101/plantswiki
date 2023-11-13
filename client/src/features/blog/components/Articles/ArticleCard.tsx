@@ -18,7 +18,7 @@ const ArticleCard: FC = () => {
       onMouseLeave={() => setCardHover(false)}
       className="cursor-pointer"
     >
-      <div className="w-full h-210px overflow-hidden hover:shadow">
+      <div className="w-full h-210px overflow-hidden">
         <img 
           src={testimg} 
           alt='' 
@@ -28,7 +28,10 @@ const ArticleCard: FC = () => {
           }
         />
       </div>
-      <div className="bg-white p-[20px] pt-[16px]">
+      <div className="bg-white 
+        xs:p-[10px] xs:pt-[10px]
+        md:p-[20px] md:pt-[16px]"
+      >
         <div className="flex flex-wrap gap-[10px] text-[11px] text-gray font-extrabold">
           <div>TOURS AND TALKS</div>
           <div>PLANT GROWING</div>
