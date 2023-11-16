@@ -1,10 +1,41 @@
 .ql-editor {
   min-height: 400px;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ql-container {
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-  background: #fefcfc;
+}
+
+.ql-editor h1 {
+  font-size: 24px !important;
+}
+
+.ql-editor p {
+  font-weight: 300 !important;
+}
+
+.ql-editor p img {
+  max-height: 400px !important; 
+  margin: auto;
+}
+
+.ql-editor u {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.ql-snow .ql-editor blockquote {
+  border-left: 3px solid #f8ccc4;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-left: 16px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ql-editor ul li {
+  font-weight: 300 !important;
 }
