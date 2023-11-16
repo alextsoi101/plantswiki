@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { FC, useRef, useEffect } from 'react';
+import './styles/articlebody.css';
 
 interface ArticleBodyProps {
   articleHTML: string;
@@ -6,14 +7,24 @@ interface ArticleBodyProps {
 
 const ArticleBody: FC<ArticleBodyProps> = ({articleHTML}) => {
 
+  const divRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if(divRef.current) {
+      divRef.current.innerHTML = articleHTML;
+    }
+  }, [articleHTML]);
+
+
   return (
-    <div>
-      <iframe
-        srcDoc={articleHTML}
-        // sandbox="allow-same-origin"
-        style={{ width: '100%', height: '100%', overflow: 'hidden', fontFamily: 'monospace'}}
-      >
-      </iframe>
+    <div className="w-full">
+      <div className="w-full">
+        <div 
+          ref={divRef}
+          className="article-body"
+        >
+          </div>
+      </div>
     </div>
   )
 }
