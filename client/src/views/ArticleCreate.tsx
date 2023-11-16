@@ -47,27 +47,20 @@ const ArticleCreate: FC = () => {
               onChangeImage={onChangeImage}
             />
           </div>
-          <div className="
-            xs:px-[32px] xs:pt-[20px] xs:pb-[40px]
+          <div className="flex justify-center
+            xs:px-[20px] xs:pt-[20px] xs:pb-[40px]
             md:px-[50px] md:pt-[20px] md:pb-[40px]
             lg:px-[100px] lg:pt-[30px] lg:pb-[50px]"
           >
-            <CreateArticleBody 
-              editorValue={editorValue}
-              onChange={setEditorValue}
-            />
-          </div>
-          <div className="min-h-[100px]
-            xs:px-[20px] xs:py-[40px]
-            md:px-[50px] md:py-[40px]
-            lg:px-[100px] lg:py-[60px]"
-          >
-            <ArticleBody 
-              articleHTML={editorValue}
-            />
+            <div className="max-w-[970px] w-full">
+              <CreateArticleBody 
+                editorValue={editorValue}
+                onChange={setEditorValue}
+              />
+            </div>
           </div>
         </div>
-        <div className="flex justify-end
+        <div className="flex justify-center
            xs:px-[20px] xs:pb-[30px]
            md:px-[50px] md:pb-[40px]
            lg:px-[100px] lg:pb-[50px]"
