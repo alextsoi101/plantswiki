@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
-import CreateArticleHeader from '../features/blog/components/CreateArticle/CreateArticleHeader';
-import CreateArticleImage from '../features/blog/components/CreateArticle/CreateArticleImage';
-import CreateArticleBody from '../features/blog/components/CreateArticle/CreateArticleBody';
-import ArticleBody from '../features/blog/components/Articles/ArticleBody';
+import { 
+  CreateArticleHeader, 
+  CreateArticleImage, 
+  CreateArticleBody } from '../features/blog/index';
 
 const ArticleCreate: FC = () => {
 
@@ -26,8 +26,6 @@ const ArticleCreate: FC = () => {
 
   const author = 'alex tsoi'
   const authorAvatarUrl = "https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D"
-
-  console.log(editorValue)
 
   return (
     <div>

@@ -1,7 +1,9 @@
 import { FC, useState } from 'react';
-import ArticleList from '../features/blog/components/Articles/ArticleList';
-import TopicButtonsGroup, { Topic } from '../features/blog/components/Topics/TopicButtonsGroup';
-import TopicSelect from '../features/blog/components/Topics/TopicSelect';
+import { 
+  ArticleList, 
+  TopicButtonsGroup, 
+  TopicSelect, 
+  Topic } from '../features/blog/index';
 
 const BlogArticles: FC = () => {
 

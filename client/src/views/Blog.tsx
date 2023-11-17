@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import TopicHighlightList from '../features/blog/components/Topics/TopicHighlightList';
-import ArticleList from '../features/blog/components/Articles/ArticleList';
+import { TopicHighlightList, ArticleList } from '../features/blog/index';
 import lastsectionimg from '../assets/images/blog-last-section.jpg';
 
 const Blog: FC = () => {

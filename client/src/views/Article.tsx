@@ -1,7 +1,5 @@
 import { FC } from 'react';
-import ArticleHeader from '../features/blog/components/Articles/ArticleHeader';
-import ArticleFooter from '../features/blog/components/Articles/ArticleFooter';
-import ArticleBody from '../features/blog/components/Articles/ArticleBody';
+import {ArticleHeader, ArticleFooter, ArticleBody} from '../features/blog/index';
 
 const Article: FC = () => {
 
