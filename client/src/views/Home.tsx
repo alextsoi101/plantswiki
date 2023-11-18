@@ -15,7 +15,7 @@ const Home: FC = () => {
               Plants of the World
             </h1>
             <h1 className="text-white font-light drop-shadow-xl text-center
-              xs:hidden sm:block sm:text-3xl md:text-4xl"
+              xs:hidden sm:block sm:text-3xl md:text-[50px]"
             >
               Welcome to Plants of the World
             </h1>
