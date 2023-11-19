@@ -1,6 +1,5 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
-import Header from '../components/layout/Header/Header';
-import Footer from '../components/layout/Footer/Footer';
+import { Header, Footer, SideMenuModal } from '../components';
 import PublicRouter from './PublicRouter';
 import PrivateRouter from './PrivateRouter';
 
@@ -11,6 +10,7 @@ const AppRouter = () => {
       <Route
         element={
           <>
+            {/* <SideMenuModal /> */}
             <Header />
             <Outlet />
             <Footer />
