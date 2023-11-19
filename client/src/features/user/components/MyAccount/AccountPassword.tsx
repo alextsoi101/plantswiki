@@ -1,5 +1,6 @@
-import { FC } from "react";
-import AccountInput, { InputVariant } from "../Elements/AccountInput";
+import { FC } from 'react';
+import AccountInput, { InputVariant } from '../Elements/AccountInput';
+import { BaseButton } from '../../../../components';
 
 interface AccountPasswordProps {
   
@@ -41,14 +42,12 @@ const AccountPassword: FC<AccountPasswordProps> = () => {
             required
           />
         </div>
-        <button 
-          className="mt-[30px] bg-blue text-white font-medium 
-            rounded-full duration-200 hover:bg-navy
-            xs:py-[10px] xs:px-[37px]
-            md:py-[15px] md:px-[45px]"
-        >
-          Save
-        </button>
+        <div className="mt-[30px]">
+          <BaseButton 
+            text='Start reading'
+            onClick={() => console.log(123)}
+          />
+        </div>
       </div>
     </div>
   )

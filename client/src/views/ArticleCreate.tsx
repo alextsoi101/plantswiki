@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { BaseButton } from '../components';
 import { 
   CreateArticleHeader, 
   CreateArticleImage, 
@@ -63,13 +64,10 @@ const ArticleCreate: FC = () => {
            md:px-[50px] md:pb-[40px]
            lg:px-[100px] lg:pb-[50px]"
         >
-          <button className="bg-blue text-white font-medium 
-            rounded-full duration-200 hover:bg-navy
-            xs:py-[10px] xs:px-[37px]
-            md:py-[15px] md:px-[45px]"
-          >
-            Save
-          </button>
+          <BaseButton 
+            text='Start reading'
+            onClick={() => console.log(123)}
+          />
         </div>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { TopicHighlightList, ArticleList } from '../features/blog/index';
+import { BaseButton } from '../components';
 import lastsectionimg from '../assets/images/blog-last-section.jpg';
 
 const Blog: FC = () => {
@@ -27,14 +28,12 @@ const Blog: FC = () => {
               interconnected tapestry. It's your green nook for botanical
               wonder.
             </div>
-            <button 
-              className="mt-[40px] bg-blue text-white font-medium 
-              rounded-full duration-200 hover:bg-navy
-              xs:py-[10px] xs:px-[37px]
-              md:py-[15px] md:px-[45px]"
-            >
-              Start reading
-            </button>
+            <div className="mt-[40px]">
+              <BaseButton 
+                text='Start reading'
+                onClick={() => console.log(123)}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -89,13 +88,12 @@ const Blog: FC = () => {
               Dive into plant profiles, gardening insights, and nature's 
               interconnected tapestry. It's your green nook for botanical wonder.
             </div>
-            <button className="mt-[20px] bg-blue text-white font-medium 
-              rounded-full duration-200 hover:bg-navy
-              xs:py-[10px] xs:px-[37px]
-              md:py-[15px] md:px-[45px]"
-            >
-              View all articles
-            </button>
+            <div className="mt-[20px]">
+              <BaseButton 
+                text='Start reading'
+                onClick={() => console.log(123)}
+              />
+            </div>
           </div>
         </div>
       </section>
