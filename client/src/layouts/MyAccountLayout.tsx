@@ -1,5 +1,8 @@
 import { FC, ReactNode, ReactElement } from "react";
-import { AccountMenu, AccountMenuContent } from "../features/user/index";
+import { 
+  AccountMenu, 
+  AccountMenuContent, 
+  AccountMenuMobile } from "../features/user/index";
 
 interface MyAccountLayoutProps {
   menuContent: AccountMenuContent;
@@ -18,6 +21,11 @@ const MyAccountLayout: FC<MyAccountLayoutProps> = ({menuContent, children}) => {
         xl:min-w-[370px]"
       >
         <AccountMenu 
+          menuContent={menuContent}
+        />
+      </div>
+      <div className="md:hidden">
+        <AccountMenuMobile 
           menuContent={menuContent}
         />
       </div>
