@@ -1,0 +1,1 @@
+export { default as SideMenuModal } from './SideMenuModal/SideMenuModal';
