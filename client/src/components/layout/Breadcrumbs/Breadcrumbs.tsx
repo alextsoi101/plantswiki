@@ -42,7 +42,7 @@ const Breadcrumbs: FC<BreadcrumbsProps> = ({lastItem}) => {
       md:px-[50px] md:py-[10px]
       lg:px-[100px] lg:py-[18px]"
     >
-      <ul className="flex items-center gap-[10px] text-sm text-black font-light
+      <ul className="flex flex-wrap items-center gap-[10px] text-sm text-black font-light
         xs:justify-center xs:text-[13px] 
         md:justify-normal md:text-sm"
       >
