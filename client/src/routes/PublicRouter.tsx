@@ -1,4 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { 
+  HOME,
+  PLANTS,
+  PLANT_INFO,
+  BLOG,
+  BLOG_ARTICLES,
+  ARTICLE,
+  ARTICLE_CREATE } from './consts';
 import Home from '../views/Home';
 import Plants from '../views/Plants';
 import PlantInfo from '../views/PlantInfo';
@@ -11,13 +19,13 @@ const PublicRouter = () => {
 
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/plants' element={<Plants />} />
-      <Route path='/plants/:id' element={<PlantInfo />} />
-      <Route path='/blog' element={<Blog />} />
-      <Route path='/blog/articles' element={<BlogArticles />} />
-      <Route path='/blog/articles/:id' element={<Article />} />
-      <Route path='/blog/create' element={<ArticleCreate />} />
+      <Route path={HOME} element={<Home />} />
+      <Route path={PLANTS} element={<Plants />} />
+      <Route path={PLANT_INFO} element={<PlantInfo />} />
+      <Route path={BLOG} element={<Blog />} />
+      <Route path={BLOG_ARTICLES} element={<BlogArticles />} />
+      <Route path={ARTICLE} element={<Article />} />
+      <Route path={ARTICLE_CREATE} element={<ArticleCreate />} />
       <Route
         path='*'
         element={<Navigate to='/' replace />}
