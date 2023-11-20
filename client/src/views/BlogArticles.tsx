@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { Breadcrumbs } from '../components';
 import { 
   ArticleList, 
   TopicButtonsGroup, 
@@ -15,6 +16,9 @@ const BlogArticles: FC = () => {
 
   return (
     <div>
+      <div>
+        <Breadcrumbs />
+      </div>
       <section className="bg-white
         xs:px-[32px] xs:pt-[20px] xs:pb-[50px]
         md:px-[50px] md:pt-[20px] md:pb-[50px]

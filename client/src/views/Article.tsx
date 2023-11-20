@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
-import {ArticleHeader, ArticleFooter, ArticleBody} from '../features/blog/index';
+import {ArticleHeader, ArticleFooter, ArticleBody} from '../features/blog';
 import { CommentsModal } from '../features/comments';
+import { Breadcrumbs } from '../components';
 
 const Article: FC = () => {
 
@@ -25,6 +26,11 @@ const Article: FC = () => {
         />
       }
       <section className="bg-white">
+        <div>
+          <Breadcrumbs 
+            lastItem='Plants growing and agronomy'
+          />
+        </div>
         <div>
           <ArticleHeader 
             openComments={openComments}

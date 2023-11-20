@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { BaseButton } from '../components';
+import { Breadcrumbs, BaseButton } from '../components';
 import { 
   CreateArticleHeader, 
   CreateArticleImage, 
@@ -28,8 +28,13 @@ const ArticleCreate: FC = () => {
   const author = 'alex tsoi'
   const authorAvatarUrl = "https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D"
 
+  console.log(editorValue)
+
   return (
     <div>
+      <div>
+        <Breadcrumbs />
+      </div>
       <section className="bg-white">
         <div>
           <div>
@@ -65,7 +70,7 @@ const ArticleCreate: FC = () => {
            lg:px-[100px] lg:pb-[50px]"
         >
           <BaseButton 
-            text='Start reading'
+            text='Save'
             onClick={() => console.log(123)}
           />
         </div>
