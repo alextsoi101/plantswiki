@@ -1,7 +1,11 @@
 import { FC } from 'react';
 import ArticleActionButtons from './ArticleActionButtons';
 
-const ArticleFooter: FC = () => {
+interface ArticleFooterProps {
+  openComments: () => void;
+}
+
+const ArticleFooter: FC<ArticleFooterProps> = ({openComments}) => {
 
   return (
     <div>
@@ -17,7 +21,9 @@ const ArticleFooter: FC = () => {
           </div>
         </div>
         <div>
-          <ArticleActionButtons />
+          <ArticleActionButtons 
+            openComments={openComments}
+          />
         </div>
       </div>
     </div>

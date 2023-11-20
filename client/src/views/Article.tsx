@@ -46,7 +46,9 @@ const Article: FC = () => {
           md:px-[50px] md:py-[30px]
           lg:px-[100px] lg:py-[40px]"
         >
-          <ArticleFooter />
+          <ArticleFooter 
+            openComments={openComments}
+          />
         </div>
       </section>
     </div>
