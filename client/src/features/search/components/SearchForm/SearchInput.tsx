@@ -2,20 +2,17 @@ import { FC } from "react";
 
 interface SearchInputProps {
   handleChange: (value: string) => void;
-  focusInput?: () => void;
-  unfocusInput?: () => void;
 }
 
-const SearchInput: FC<SearchInputProps> = ({handleChange, focusInput, unfocusInput}) => {
+const SearchInput: FC<SearchInputProps> = ({handleChange}) => {
   return (
     <div className="flex items-center w-[100%] rounded-full border border-silver">
       <input 
         type="text" 
         placeholder="Search..."
         onChange={(e) => handleChange(e.target.value)}
-        onFocus={focusInput}
-        onBlur={unfocusInput}
-        className="w-[100%] rounded-l-full text-dark-black placeholder:text-dark placeholder:font-light
+        className="w-[100%] rounded-l-full text-dark-black 
+          placeholder:text-dark placeholder:font-light
           xs:h-[40px] xs:px-[22px]
           md:h-[50px] md:px-[26px]"
       />

@@ -1,32 +1,39 @@
-import { FC, useState } from "react";
-import SearchInput from "./SearchInput";
-import SearchFormResults from "./SearchFormResults";
+import { FC, useState, useRef } from 'react';
+import { useOnClickOutside } from '../../../../hooks/useOnClickOutside';
+import SearchInput from './SearchInput';
+import SearchFormResults from './SearchFormResults';
 
 const SearchForm: FC = () => {
 
-  const [inputFocus, setInputFocus] = useState<boolean>(false);
+  const [resultsVisible, setResultsVisible] = useState<boolean>(false);
   const [inputText, setInputText] = useState<string | null>(null);
 
-  const focusInput = (): void => {
-    setInputFocus(true)
+  const searchFormRef = useRef<HTMLDivElement>(null);
+
+  const showResults = () => {
+    setResultsVisible(true)
   }
 
-  const unfocusInput = (): void => {
-    setInputFocus(false)
+  const hideResults = () => {
+    setResultsVisible(false)
   }
 
   const handleInputChange = (value: string): void => {
     setInputText(value)
   }
 
+  useOnClickOutside(searchFormRef, hideResults);
+
   return (
-    <div className="relative w-[100%]">
+    <div 
+      ref={searchFormRef}
+      onClick={showResults}
+      className="relative w-[100%]"
+    >
       <SearchInput 
         handleChange={handleInputChange}
-        focusInput={focusInput}
-        unfocusInput={unfocusInput}
       />
-      <div className={ inputFocus
+      <div className={ resultsVisible
         ? "absolute mt-[5px] w-[100%] z-50"
         : "hidden mt-[5px] w-[100%] z-50"
         }
