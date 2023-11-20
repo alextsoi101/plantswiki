@@ -4,18 +4,25 @@ import SideMenuModalCard from './SideMenuModalCard';
 import menuIcon from '../../../assets/icons/main-menu.svg';
 import whiteMenuIcon from '../../../assets/icons/main-menu-white.svg';
 
-const SideMenuModal: FC = () => {
+interface SideMenuModalProps {
+  onClose: () => void;
+}
+
+const SideMenuModal: FC<SideMenuModalProps> = ({onClose}) => {
 
   const [buttonHover, setButtonHover] = useState(false);
 
   return (
-    <ModalLayout>
+    <ModalLayout
+      onClose={onClose}
+    >
       <div className="h-full bg-white shadow-xl xs:w-full md:w-[400px]">
-        <div className="p-[14px]">
+        <div className="p-[12px] ml-[8px]">
           <button 
-            className="p-[12px] bg-transparent rounded-full hover:bg-blue"
             onMouseEnter={() => setButtonHover(true)}
             onMouseLeave={() => setButtonHover(false)}
+            onClick={onClose}
+            className="p-[12px] bg-transparent rounded-full hover:bg-blue"
           >
             <img 
               src={buttonHover ? whiteMenuIcon : menuIcon}
