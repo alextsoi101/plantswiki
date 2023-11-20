@@ -1,15 +1,34 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import {ArticleHeader, ArticleFooter, ArticleBody} from '../features/blog/index';
+import { CommentsModal } from '../features/comments';
 
 const Article: FC = () => {
+
+  const [commentsOpen, setCommentsOpen] = useState<boolean>(false);
+
+  const openComments = () => {
+    setCommentsOpen(true)
+  }
+
+  const closeComments = () => {
+    setCommentsOpen(false)
+  }
 
   const articleHTML = '';
 
   return (
     <div>
+      {commentsOpen &&
+        <CommentsModal 
+          total={23}
+          onClose={closeComments}
+        />
+      }
       <section className="bg-white">
         <div>
-          <ArticleHeader />
+          <ArticleHeader 
+            openComments={openComments}
+          />
         </div>
         <div className="flex justify-center
           xs:px-[20px] xs:py-[40px]

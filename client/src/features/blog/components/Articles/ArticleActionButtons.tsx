@@ -1,10 +1,17 @@
 import { FC } from 'react';
 
-const ArticleActionButtons: FC = () => {
+interface ArticleActionButtonsProps {
+  openComments: () => void;
+}
+
+const ArticleActionButtons: FC<ArticleActionButtonsProps> = ({openComments}) => {
 
   return (
     <div className="flex items-center xs:gap-[10px] md:gap-[20px]">
-      <div className="flex items-center gap-[3px] text-gray cursor-pointer duration-100 hover:text-dark">
+      <div 
+        onClick={openComments}
+        className="flex items-center gap-[3px] text-gray cursor-pointer duration-100 hover:text-dark"
+      >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           fill="none"
@@ -19,7 +26,10 @@ const ArticleActionButtons: FC = () => {
           1292
         </div>
       </div>
-      <div className="flex items-center gap-[3px] text-gray cursor-pointer duration-100 hover:text-dark">
+      <div 
+        className="flex items-center gap-[3px] text-gray cursor-pointer duration-100 hover:text-dark"
+        onClick={openComments}
+      >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           fill="none" 

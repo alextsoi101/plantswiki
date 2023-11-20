@@ -1,7 +1,13 @@
 import { FC } from 'react';
 import ArticleActionButtons from './ArticleActionButtons';
 
-const ArticleHeader: FC = () => {
+interface ArticleHeaderProps {
+  openComments: () => void;
+}
+
+const ArticleHeader: FC<ArticleHeaderProps> = ({openComments}) => {
+
+
 
   return (
     <div>
@@ -44,7 +50,9 @@ const ArticleHeader: FC = () => {
           </span>
         </div>
         <div className="flex justify-center xs:mt-[10px] md:mt-[20px]">
-          <ArticleActionButtons />
+          <ArticleActionButtons 
+            openComments={openComments}
+          />
         </div>
       </div>
       <div className="overflow-hidden xs:h-[250px] md:h-[350px]">
