@@ -5,4 +5,5 @@ export { default as AccountArticles } from './components/MyAccount/AccountArticl
 export { default as AccountReactions } from './components/MyAccount/AccountReactions';
 export { default as AccountInformation } from './components/MyAccount/AccountInformation';
 export { default as AccountPassword } from './components/MyAccount/AccountPassword';
+export { default as UserAccountHeader } from './components/UserAccount/UserAccountHeader';
 export { AccountMenuContent } from './components/MyAccount/AccountMenu';
