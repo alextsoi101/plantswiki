@@ -1,0 +1,32 @@
+//Public router:
+export const HOME = '/';
+export const PLANTS = '/plants';
+export const PLANT_INFO = '/plants/:id';
+export const BLOG = '/blog';
+export const BLOG_ARTICLES = '/blog/articles';
+export const ARTICLE = '/blog/articles/:id';
+export const ARTICLE_CREATE = '/blog/create';
+export const USER = '/user/:id';
+export const AUTH = '/auth';
+
+//Private router:
+export const MY_ACCOUNT = '/myaccount';
+export const MY_ARTICLES = '/myaccount/articles';
+export const MY_REACTIONS = '/myaccount/reactions';
+export const MY_INFORMATION = '/myaccount/information';
+export const MY_PASSWORD = '/myaccount/password';
+
+//Page paths:
+export const HOME_PAGE = '/';
+export const PLANTS_PAGE = '/plants';
+export const PLANT_INFO_PAGE = (id: string) => `/plants/${id}`;
+export const BLOG_PAGE = '/blog';
+export const BLOG_ARTICLES_PAGE = '/blog/articles';
+export const ARTICLE_PAGE = (id: string) => `/blog/articles/${id}`;
+export const ARTICLE_CREATE_PAGE = '/blog/create';
+export const USER_PAGE = (id: string) => `/user/${id}`;
+export const AUTH_PAGE = '/auth';
+export const MY_ACCOUNT_PAGE = '/myaccount';
+export const MY_ARTICLES_PAGE = '/myaccount/articles';
+export const MY_INFORMATION_PAGE = '/myaccount/information';
+export const MY_PASSWORD_PAGE = '/myaccount/password';
