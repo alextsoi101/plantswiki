@@ -17,7 +17,10 @@ const SideMenuModal: FC<SideMenuModalProps> = ({onClose}) => {
       onClose={onClose}
     >
       <div className="h-full bg-white shadow-xl xs:w-full md:w-[400px]">
-        <div className="p-[12px] ml-[8px]">
+        <div className="
+          xs:p-[4px] xs:ml-[6px]
+          md:p-[12px] md:ml-[8px]"
+        >
           <button 
             onMouseEnter={() => setButtonHover(true)}
             onMouseLeave={() => setButtonHover(false)}
