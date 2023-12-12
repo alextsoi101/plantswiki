@@ -27,7 +27,7 @@ Comments Section: A feature for users to engage in discussions and share their t
 #### Technologies
 Frontend: Developed with TypeScript and React, offering a dynamic and responsive user interface.
 
-Styling: Tailored UI with TailwindCSS for a modern and elegant design.
+Styling: TailwindCSS for a modern and elegant design.
 
 State Management: Utilized Redux for efficient and predictable state management across the application.
 
