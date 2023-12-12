@@ -1,8 +1,9 @@
 # Plants Wiki & Blog
-#### PlantsWiki - A Full-Stack Plant Exploration App
+PlantsWiki - A Full-Stack Plant Exploration App
 
 ## Project Status
-#### [Discontinued]: Please note that this project is no longer maintained due to the discontinuation of the Trefle.io API, which was a key component for the plant data and search functionality in PlantsWiki.
+
+## Please note that this project is no longer maintained due to the discontinuation of the Trefle.io API, which was a key component for the plant data and search functionality in PlantsWiki.
 
 #### Overview
 PlantsWiki is a full-stack web application dedicated to plant enthusiasts and gardeners. 
